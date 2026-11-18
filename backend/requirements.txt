@@ -1,0 +1,6 @@
+# Known compatible SDK generation; no installation occurs during startup.
+fastapi>=0.115,<1
+uvicorn>=0.30,<1
+httpx>=0.27,<0.29
+mcp>=1.30,<2
+jsonschema>=4.23,<5

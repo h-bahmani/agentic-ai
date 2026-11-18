@@ -1,0 +1,19 @@
+"""Phase 2 contracts. Implementations must use approved, already installed services."""
+from typing import Protocol
+
+class SpeechToText(Protocol):
+    async def transcribe(self, upload_id: str, language: str = 'fa') -> str: ...
+
+class TextToSpeech(Protocol):
+    async def synthesize(self, text: str, voice: str) -> bytes: ...
+
+class Vision(Protocol):
+    async def understand(self, upload_id: str, question: str) -> str: ...
+
+class ImageGeneration(Protocol):
+    async def generate(self, prompt: str) -> str: ...
+
+class ConversationRepository(Protocol):
+    """Future dedicated PostgreSQL agent schema; never migrate company tables."""
+    def create(self, owner: str) -> str: ...
+    def get(self, key: str, owner: str): ...
