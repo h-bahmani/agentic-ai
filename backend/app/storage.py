@@ -8,6 +8,7 @@ class Conversation:
     owner: str
     messages: list[dict] = field(default_factory=list)
     evidence: list[dict] = field(default_factory=list)
+    outlook: dict = field(default_factory=dict)
 
 class MemoryStore:
     def __init__(self): self.conversations: dict[str, Conversation] = {}

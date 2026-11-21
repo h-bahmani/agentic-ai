@@ -1,3 +1,5 @@
+> گزارش تاریخی؛ وضعیت فعلی را با scripts/verify.py و تست‌های فعلی بررسی کنید.
+
 # گزارش اجرای 2026-11-16
 
 ## تأیید واقعی
@@ -21,7 +23,7 @@
 از ریشه مخزن:
 
 ```powershell
-& 'D:\CompanyMicroApiTest\.venv\Scripts\python.exe' .\enterprise_agent\scripts\verify_live.py
+& 'D:\CompanyMicroApiTest\.venv\Scripts\python.exe' .\enterprise_agent\scripts\verify.py health
 ```
 
 این آزمون فقط با سرویس‌های واقعی اجرا می‌شود. اگر مدل یا MCP موجود نباشد با کد 2 متوقف می‌شود. اگر مدل count tool را اجرا نکرده یا پاسخ نهایی ندهد با کد 3 شکست می‌خورد؛ هیچ fallback ساختگی ندارد. خروجی فارسی باید با شاهد عددی واقعی تطبیق داده شود؛ موفقیت transport/loop به‌تنهایی تضمین صحت تمام متن مدل نیست.
